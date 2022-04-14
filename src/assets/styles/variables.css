@@ -1,0 +1,8 @@
+:root {
+  --brand-main: #15083E;
+  --text-main: #FFFFFF; 
+  --link-hover: #6CD3FF;
+  --link-selected: #6CD3FF;
+
+  --transition-seconds: 0.2s;
+}

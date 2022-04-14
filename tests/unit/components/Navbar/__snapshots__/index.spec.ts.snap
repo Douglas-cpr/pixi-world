@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar /> renders correctly 1`] = `
+<header
+  class="header"
+>
+  <icon-stub
+    name="Logo"
+  />
+  <ul
+    class="header__routes"
+  >
+    <li
+      class="route__link--selected route__link"
+    >
+      Home
+    </li>
+    <li
+      class="route__link"
+    >
+      About
+    </li>
+    <li
+      class="route__link"
+    >
+      Features
+    </li>
+  </ul>
+  <div
+    class="header__actions"
+  >
+    <button-stub
+      class="actions__btn"
+      disabled="false"
+      height="35"
+      type="primary"
+      width="100"
+    />
+    <button-stub
+      class="actions__btn"
+      disabled="false"
+      height="35"
+      type="secondary"
+      width="140"
+    />
+  </div>
+</header>
+`;
