@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Icon from '@/components/common/Icon/index.vue'
 import Button from '@/components/common/Button/index.vue';
+
 </script>
 
 <template>

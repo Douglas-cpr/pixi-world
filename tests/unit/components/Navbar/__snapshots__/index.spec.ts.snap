@@ -13,17 +13,23 @@ exports[`<Navbar /> renders correctly 1`] = `
     <li
       class="route__link--selected route__link"
     >
-      Home
+      <a>
+        Home
+      </a>
     </li>
     <li
       class="route__link"
     >
-      About
+      <a>
+        About
+      </a>
     </li>
     <li
       class="route__link"
     >
-      Features
+      <a>
+        Features
+      </a>
     </li>
   </ul>
   <div

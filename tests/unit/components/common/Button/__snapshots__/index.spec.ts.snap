@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render correctly 1`] = `
+<button
+  class="common__button common__button--primary"
+  style="height: 40px; width: 100px;"
+>
+  
+  
+</button>
+`;
