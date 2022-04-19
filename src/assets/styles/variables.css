@@ -3,6 +3,8 @@
   --text-main: #FFFFFF; 
   --link-hover: #6CD3FF;
   --link-selected: #6CD3FF;
+  --modal-bg: #fff;
+  --message-error-color: #ef4444;
 
   --transition-seconds: 0.2s;
 }

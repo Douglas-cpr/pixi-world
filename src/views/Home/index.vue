@@ -16,7 +16,7 @@ import Overview from './Overview.vue'
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem 5rem;
+  padding: 1rem 15%;
   gap: 10vh;
 }
 

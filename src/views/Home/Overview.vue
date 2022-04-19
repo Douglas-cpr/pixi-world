@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import Button from '@/components/common/Button/index.vue'
+import Button from '@/components/Button/index.vue'
+import Icon from '@/components/factories/Icon/index.vue'
 </script>
 
 <template>
@@ -9,19 +10,27 @@ import Button from '@/components/common/Button/index.vue'
         Discover <span class="text__title--special">Characters</span><br/>
         in Pixi-World
       </h1>
-      <p>We believe the world is more beautiful as each person gets better. We believe the world is more beautiful as each person gets better. Person gets better.</p>
+      <p class="text__description">We believe the world is more beautiful as each person gets better.</p>
       <Button :width="150" :height="40" :onClick="() => {}">Get Started for Free</Button>
     </div>
-
     <div class="overview__images">
-      aaaa
+      <div class="images__container">
+        <Icon class="overview__icon" name="Calendar"/>
+        <Icon class="overview__icon" name="Man"/>
+      </div>
+      <Icon class="images__background" name="Ball"/>
+      <div class="images__container">
+        <Icon class="overview__icon" name="Woman"/>
+        <Icon class="overview__icon" name="Phone"/>
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
 .overview {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .overview__text {
   display: flex;
@@ -44,8 +53,36 @@ import Button from '@/components/common/Button/index.vue'
   -webkit-text-fill-color: transparent;
 }
 
+.text__description {
+  max-width: 400px;
+}
+
 .overview__images {
-  flex: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+}
+
+.images__container {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overview__icon {
+  padding: 0.5rem 0;
+}
+
+.images__background {
+  position: absolute;
+  z-index: -1;
+  left: 20%;
+}
+
+.overview__icon {
+  padding: 0;
 }
 
 @media (max-width: 425px) {

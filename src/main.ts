@@ -1,13 +1,16 @@
 import { createApp } from 'vue'
+import Toast from 'vue-toastification'
 
 import App from '@/App.vue'
 import router from '@/router'
-// import store from '@/store'
 
+
+import "vue-toastification/dist/index.css"
+import 'animate.css'
 import '@/assets/styles/variables.css'
 import '@/assets/styles/global.css'
 
 createApp(App)
-  // .use(store)
   .use(router)
+  .use(Toast)
   .mount('#app')

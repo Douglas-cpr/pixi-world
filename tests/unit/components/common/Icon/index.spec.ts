@@ -1,4 +1,4 @@
-import Icon from '@/components/common/Icon/index.vue'
+import Icon from '@/components/factories/Icon/index.vue'
 import { VueWrapper, shallowMount } from "@vue/test-utils";
 
 type IconProps = {

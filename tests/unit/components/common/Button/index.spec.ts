@@ -1,4 +1,4 @@
-import Button from '@/components/common/Button/index.vue'
+import Button from '@/components/factories/Button/index.vue'
 import { shallowMount, VueWrapper } from '@vue/test-utils'
 
 type ButtonProps = {

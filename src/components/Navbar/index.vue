@@ -1,6 +1,21 @@
 <script lang="ts" setup>
-import Icon from '@/components/common/Icon/index.vue'
-import Button from '@/components/common/Button/index.vue';
+import Icon from '@/components/factories/Icon/index.vue'
+import Button from '@/components/Button/index.vue'
+import { useModal } from '@/hooks/useModal'
+
+const modal = useModal()
+
+const openLoginModal = () => {
+  modal.open({
+    component: 'ModalLogin'
+  })
+}
+
+const openModalSignup = () => {
+  modal.open({
+    component: 'ModalSignup'
+  })
+}
 
 </script>
 
@@ -13,8 +28,8 @@ import Button from '@/components/common/Button/index.vue';
       <li class="route__link"><a>Features</a></li>
     </ul>
     <div class="header__actions">
-      <Button type="primary" :onClick="() => {}" class="actions__btn">Sign In</Button>
-      <Button type="secondary" :width="140" :onClick="() => {}" class="actions__btn">Create Account</Button>
+      <Button type="primary" :onClick="openLoginModal" class="actions__btn">Sign In</Button>
+      <Button type="secondary" :onClick="openModalSignup" :width="140" class="actions__btn">Create Account</Button>
     </div>
   </header>
 </template>
