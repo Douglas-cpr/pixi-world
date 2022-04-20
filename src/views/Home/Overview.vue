@@ -31,6 +31,7 @@ import Icon from '@/components/factories/Icon/index.vue'
 .overview {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding: 10% 0;
 }
 .overview__text {
   display: flex;

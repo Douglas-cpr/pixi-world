@@ -2,6 +2,7 @@
 import Icon from '@/components/factories/Icon/index.vue'
 import Button from '@/components/Button/index.vue'
 import { useModal } from '@/hooks/useModal'
+import store from '@/store'
 
 const modal = useModal()
 
@@ -16,7 +17,6 @@ const openModalSignup = () => {
     component: 'ModalSignup'
   })
 }
-
 </script>
 
 <template>
@@ -27,9 +27,14 @@ const openModalSignup = () => {
       <li class="route__link"><a>About</a></li>
       <li class="route__link"><a>Features</a></li>
     </ul>
-    <div class="header__actions">
+    <div class="header__actions" v-if="!store.currentUser">
       <Button type="primary" :onClick="openLoginModal" class="actions__btn">Sign In</Button>
       <Button type="secondary" :onClick="openModalSignup" :width="140" class="actions__btn">Create Account</Button>
+    </div>
+    <div class="header__user" v-else>
+      <div class="user__name">
+        <span>{{ store.currentUser.username }}</span>
+      </div>
     </div>
   </header>
 </template>
@@ -87,6 +92,10 @@ const openModalSignup = () => {
   position: absolute;
   border-radius: 999px;
   background-color: var(--link-hover);
+}
+
+.user__name {
+  font-weight: bold;
 }
 
 @media (max-width: 425px) {

@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import UsersList from '@/views/Admin/UsersList.vue'
+</script>
+
+
 <template>
-  <h1>Admin page</h1>
+  <div class="admin">
+    <UsersList />
+  </div>
 </template>
+
+<style scoped>
+</style>

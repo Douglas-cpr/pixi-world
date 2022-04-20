@@ -9,9 +9,11 @@ import { setCurrentUser } from '@/store'
 import { useField } from 'vee-validate'
 import { reactive } from 'vue';
 import { useToast } from 'vue-toastification'
+import { useRouter } from 'vue-router';
 
 const modal = useModal()
 const toast = useToast()
+const router = useRouter()
 
 const {
   value: usernameValue,
@@ -50,19 +52,26 @@ function openModalSignup(): void {
   })
 }
 
+function handleRedirect(role: string) {
+  if (role === 'admin') {
+    router.push('/admin')
+  } else {
+    router.push('/')
+  }
+}
+
 async function handleLogin() {
   const response = await services.login.login(state.username.value, state.password.value);
 
   if (response.data) {
     setCurrentUser(response.data);
+    handleRedirect(response.data.role)
     modal.close(null)
-    return
   } 
   
   if (response.error) {
     toast.error(response.error.message)
   }
-
 }
 </script>
 
